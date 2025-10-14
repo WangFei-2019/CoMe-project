@@ -55,8 +55,8 @@
   <meta name="citation_title" content="Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation">
   <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
   <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="citation_conference_title" content="The Thirty-ninth Annual Conference on Neural Information Processing Systems">
   <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
   
   <!-- Additional SEO -->
@@ -74,7 +74,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation - AUTHOR_NAMES | Academic Research</title>
+  <title>Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation - Fei Wang, Li Shen, Liang Ding, Chao Xue, Ye Liu, Changxing Ding | Academic Research</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -173,7 +173,7 @@
     "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
       "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/WangFei-2019"
     ]
   }
   </script>
@@ -245,19 +245,25 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="None" target="_blank">Fei Wang</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://sites.google.com/site/mathshenli/home" target="_blank">Li Shen</a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://liamding.cc/" target="_blank">Liang Ding</a>
+                    <span class="author-block">
+                      <a href="None" target="_blank">Chao Xue</a>
+                      <span class="author-block">
+                        <a href="https://www2.scut.edu.cn/mcsy/2021/1208/c31522a453982/page.htm" target="_blank">Ye Liu</a>
+                        <span class="author-block">
+                          <a href="https://yanzhao.scut.edu.cn/open/ExpertInfo.aspx?zjbh=XR8D1F1zjN8RcGhgOoX2Eg==" target="_blank">Changxing Ding</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
+                    <span class="author-block">South China University of Technology<br>The Thirty-ninth Annual Conference on Neural Information Processing Systems 2025</span>
                     <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -286,7 +292,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/WangFei-2019" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -341,7 +347,15 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Large Language Models excel at natural language processing tasks, but their massive size leads to high computational and storage demands.
+            Recent works have sought to reduce their model size through layer-wise structured pruning.
+            However, they tend to ignore retaining the capabilities in the pruned part. 
+            In this work, we re-examine structured pruning paradigms and uncover several key limitations: 1) notable performance degradation due to direct layer removal, 2) incompetent linear weight layer aggregation, and 3) the lack of effective post-training recovery mechanisms.
+            To address these limitations, we propose CoMe, including a progressive layer pruning framework with a <b>Co</b>bncatenation-based <b>Me</b>brging technology and a hierarchical distillation post-training process. 
+            Specifically, we introduce a channel sensitivity metric that utilizes activation intensity and weight norms for fine-grained channel selection. 
+            Subsequently, we employ a concatenation-based layer merging method to fuse the most critical channels across adjacent layers, enabling progressive model size reduction. 
+            Finally, we propose a hierarchical distillation protocol that leverages the correspondences between the original and pruned model layers established during the pruning process, thereby enabling efficient knowledge transfer.
+            Experiments on seven benchmarks show that CoMe achieves state-of-the-art performance; when pruning 30% of LLaMA-2-7b's parameters, the pruned model retains 83% of its original average accuracy.
           </p>
         </div>
       </div>
@@ -480,12 +494,11 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@article{wang2025layer,
+  title={Layer as Puzzle Pieces: Compressing Large Language Models through Layer Concatenation},
+  author={Fei Wang and Li Shen and Liang Ding and Chao Xue and Ye Liu and Changxing Ding},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+  year={2025},
 }</code></pre>
     </div>
 </section>
